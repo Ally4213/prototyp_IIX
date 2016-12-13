@@ -5,19 +5,18 @@
 
 <meta charset="utf-8">
 <link href="../css/main.css" rel="stylesheet">
-
+<link href="../css/label-left.css" rel="stylesheet">
 <!-- Gettting Bootstrap CSS -->
 <link rel="stylesheet"
 	href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
-<!-- Getting Bootstrap JS -->
-<script
-	src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 <!-- Getting Bootstrap JQuery -->
 <script
 	src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+<!-- Getting Bootstrap JS -->
+<script
+	src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 </head>
 <body>
-
 	<!-- NAVBAR -->
 	<nav class="navbar navbar-inverse">
 		<div class="container-fluid">
@@ -43,7 +42,79 @@
 			</ul>
 		</div>
 	</nav>
-	<div class="margin_top">The profile goes here!</div>
 	
+	
+	<!-- profile container -->
+	<div class="center">
+	<div class="margin_top">
+		<div class="container-fluid" style="background-color: #f0f0f0">
+			<h2>Profil</h2>
+			<form class="form-horizontal">
+				<div class="form-group">
+				<label class="control-label col-md-2">Name: </label>
+					<div class="col-md-4">
+						<input id="loggedInUserName" type="text" class="form-control" placeholder="Name">
+					</div>
+				</div>	
+			</form>
+			<form class="form-horizontal">
+				<div class="form-group">
+				<label class="control-label col-md-2" for="mtr">Matrikelnummer:</label>
+					<div class="col-md-4">
+						<p id="loggedInUserMatNr" class="form-control-static"></p>
+					</div>
+				</div>	
+			</form>
+			<form class="form-horizontal">
+				<div class="form-group">
+				<label class="control-label col-md-2" for="email">Email:</label>
+					<div class="col-md-4">
+						<input id="loggedInUserMail" type="text" class="form-control" placeholder="Email">
+					</div>
+				</div>	
+			</form>
+			<form class="form-horizontal">
+				<div class="form-group">
+				<label class="control-label col-md-2" for="add">Über dich:</label>
+					<div class="col-md-4">
+						<textarea id="loggedInUserAdd" type="text" class="form-control" rows="5" 
+						placeholder="Füge zusätzliche Informationen zu dir ein!"></textarea>
+					</div>
+				</div>
+			</form>
+			<form class="form-horizontal">
+				<div class="form-group">
+					<div class="col-md-6">
+						<button id="saveUserDataButton" type="button" class="btn btn-primary btn-md" style="float: right" 
+						data-toggle="modal" data-target="#myModal" onclick="saveLoggedInUserData()">Speichern</button>
+						<!-- Modal -->
+						  <div class="modal fade" id="myModal" role="dialog">
+							<div class="modal-dialog">
+							
+							  <!-- Modal content-->
+							  <div class="modal-content">
+								<div class="modal-header">
+								  <button type="button" class="close" data-dismiss="modal">&times;</button>
+								  <h4 class="modal-title">Erfolg!</h4>
+								</div>
+								<div class="modal-body">
+								  <p>Daten wurden erfolgreich gespeichert.</p>
+								</div>
+								<div class="modal-footer">
+								  <button type="button" class="btn btn-default" data-dismiss="modal">OK</button>
+								</div>
+							  </div>
+							  
+							</div>
+						  </div>
+						<!-- modal end -->
+						
+					</div>
+				</div>
+			</form>
+		</div>
+	</div>
+	</div>
+	<script src="../js/profile.js"></script>
 </body>
 </html>

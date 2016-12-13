@@ -16,3 +16,8 @@ body {
 	padding-top: 65px;
 	color: black;
 }
+
+.center {
+    margin: 0 auto;
+    width: 80%;
+}
