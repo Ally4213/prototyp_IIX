@@ -6,29 +6,33 @@
 	<meta charset="utf-8">
 	<link href="../css/main.css" rel="stylesheet">
 
+	<!-- Getting Bootstrap JQuery -->
+	<script
+			src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
 	<!-- Gettting Bootstrap CSS -->
 	<link rel="stylesheet"
 		  href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"/>
-	<!-- Getting Bootstrap JQuery -->
-	<script
-		src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
 	<!-- Getting Bootstrap JS -->
 	<script
 		src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
-
-
+	<script src="../js/js.cookie.js"></script>
+	<script src="../js/state.js"></script>
 </head>
 <body>
-
 	<!-- NAVBAR -->
 	<nav class="navbar navbar-inverse">
 		<div class="container-fluid">
 			<div class="navbar-header">
 				<a class="navbar-brand" href="../html/landing_logged_in.html">ShareScript</a>
+				<!-- tite has to be discussed! -->
 			</div>
 			<ul class="nav navbar-nav navbar-right">
-				<li><a href="../html/profile.html"><span
+				<!--       <li><a href="#"><span class="glyphicon glyphicon-user"></span> Sign Up</a></li> -->
+				<li class="logged-in"><a href="../html/profile.html"><span
 						class="glyphicon glyphicon-user"></span>Profile</a></li>
+				<li class="logged-in"><a onclick="logout();" href="#"><span
+						class="glyphicon glyphicon-off"></span>Logout</a></li>
+				<li class="logged-out"><a onclick="login();" href="#"><span class="glyphicon glyphicon-log-in"></span> Login über ZID</a></li>
 			</ul>
 		</div>
 	</nav>
@@ -59,12 +63,18 @@
 					<input type="date" class="form-control" id="Date" placeholder="DD.MM.YYYY">
 				</div>
 				<div class="form-group">
-					<input id="submit" name="submit" type="submit" value="Send" class="btn btn-primary pull-right">
+					<input id="submit" name="submit" type="submit" value="Suchen" class="btn btn-primary pull-right">
 				</div>
 
 			</form>
 		</div>
 	</div>
-
+	<script>
+        if(Cookies.get('state' == 'logged-in')) {
+            login();
+        } else {
+            logout();
+        }
+	</script>
 </body>
 </html>
