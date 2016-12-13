@@ -33,21 +33,36 @@
 		</div>
 	</nav>
 
-	<div class="container" style="background-color: red; min-width: 90%">
+	<div class="container">
 		<div class="col-sm-1"></div>
-		<div class="col-sm-5 pull-left">
-			<div class="form-group">
-				<label for="Name">Name:</label>
-				<input type="text" class="form-control" id="Name" placeholder="Name">
-				<label for="Keywords">Schlagwörter:</label>
-				<input type="text" class="form-control" id="Keywords" placeholder="Schlagwörter">
-				<label for="Semester">Semester:</label>
-				<input type="text" class="form-control" id="Semester" placeholder="Semester">
-				<label for="Course">Kurs:</label>
-				<input type="text" class="form-control" id="Course" placeholder="Kurs">
-			</div>
+		<div class="col-sm-7 col-xs-10 pull-left">
+			<h3 class="text-center">Erweiterte Suche</h3>
+			<form class="form-horizontal" role="form" method="get" action="./search_result.html">
+				<div class="form-group">
+					<label class="control-label" for="Name">Name:</label>
+					<input type="text" class="form-control" id="Name" placeholder="Name">
+				</div>
+				<div class="form-group">
+					<label for="Keywords">Schlagwörter:</label>
+					<input type="text" class="form-control" id="Keywords" placeholder="Schlagwörter">
+				</div>
+				<div class="form-group">°
+					<label for="Semester">Semester:</label>
+					<input type="text" class="form-control" id="Semester" placeholder="WS2016">
+				</div>
+				<div class="form-group">
+					<label for="Course">Kurs:</label>
+					<input type="text" class="form-control" id="Course" placeholder="Kurs">
+				</div>
+				<div class="form-group">
+					<label for="Course">Seit Datum:</label>
+					<input type="date" class="form-control" id="Date" placeholder="DD.MM.YYYY">
+				</div>
+				<div class="form-group">
+					<input id="submit" name="submit" type="submit" value="Send" class="btn btn-primary pull-right">
+				</div>
 
-
+			</form>
 		</div>
 	</div>
 
