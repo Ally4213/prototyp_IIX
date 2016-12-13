@@ -17,7 +17,9 @@
 	<script
 		src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 
-
+	<link href="../css/state.css" rel="stylesheet">
+	<script src="../js/js.cookie.js"></script>
+	<script src="../js/state.js"></script>
 </head>
 <body>
 
@@ -41,8 +43,12 @@
 			<!--     </ul> -->
 			<ul class="nav navbar-nav navbar-right">
 				<!--       <li><a href="#"><span class="glyphicon glyphicon-user"></span> Sign Up</a></li> -->
-				<li><a href="../html/profile.html"><span
+				<li class="logged-in"><a href="../html/profile.html"><span
 						class="glyphicon glyphicon-user"></span>Profile</a></li>
+				<li class="logged-in"><a onclick="logout();" href="#"><span
+						class="glyphicon glyphicon-off"></span>Logout</a></li>
+
+				<li class="logged-out"><a onclick="login();" href="#"><span class="glyphicon glyphicon-log-in"></span> Login über ZID</a></li>
 			</ul>
 		</div>
 	</nav>
@@ -71,24 +77,24 @@
 			<span class="downward_arrow glyphicon glyphicon-chevron-down"></span>
 		</div>
 	</div>
-	<div class="row">
+	<div class="row logged-in">
 		<div class="col-sm-1"></div>
 		<div class="col-sm-5 row">
 			<h3>Zuletzt angesehen:</h3>
 			<div class="col-sm-10">
 				<div class="list-group">
-					<a href="#" class="list-group-item">
+					<a href="./script_detail.html" class="list-group-item">
 						<h4 class="list-group-item-heading">Script Number One</h4>
 						<p class="list-group-item-text">Details like Content, Semester, ....</p>
 					</a>
-					<a href="#" class="list-group-item">
+					<a href="./script_detail.html" class="list-group-item">
 						<h4 class="list-group-item-heading">Script Number One</h4>
 						<p class="list-group-item-text">Details like Content, Semester, ....</p>
 					</a>
 				</div>
 			</div>
 		</div>
-		<div class="col-sm-5 row">
+		<div class="col-sm-5 row logged-in">
 			<h3> <span>
 				<a href=""> Meine Uploads </a>
 				<a href="../html/upload_script.html">
@@ -98,11 +104,11 @@
 			</h3>
 			<div class="col-sm-10">
 				<div class="list-group">
-					<a href="#" class="list-group-item">
+					<a href="./script_detail.html" class="list-group-item">
 						<h4 class="list-group-item-heading">Upload Number One</h4>
 						<p class="list-group-item-text">Details like Content, Semester, ....</p>
 					</a>
-					<a href="#" class="list-group-item">
+					<a href="./script_detail.html" class="list-group-item">
 						<h4 class="list-group-item-heading">Upload Number One</h4>
 						<p class="list-group-item-text">Details like Content, Semester, ....</p>
 					</a>
@@ -110,5 +116,45 @@
 			</div>
 		</div>
 	</div>
+	<div class="row">
+		<div class="col-sm-1"></div>
+		<div class="col-sm-5 row">
+			<h3>Neue Uploads:</h3>
+			<div class="col-sm-10">
+				<div class="list-group">
+					<a href="./script_detail.html" class="list-group-item">
+						<h4 class="list-group-item-heading">Script Number One</h4>
+						<p class="list-group-item-text">Details like Content, Semester, ....</p>
+					</a>
+					<a href="./script_detail.html" class="list-group-item">
+						<h4 class="list-group-item-heading">Script Number One</h4>
+						<p class="list-group-item-text">Details like Content, Semester, ....</p>
+					</a>
+				</div>
+			</div>
+		</div>
+		<div class="col-sm-5 row">
+			<h3>Beliebte Einträge:</h3>
+			<div class="col-sm-10">
+				<div class="list-group">
+					<a href="./script_detail.html" class="list-group-item">
+						<h4 class="list-group-item-heading">Script Number One</h4>
+						<p class="list-group-item-text">Details like Content, Semester, ....</p>
+					</a>
+					<a href="./script_detail.html" class="list-group-item">
+						<h4 class="list-group-item-heading">Script Number One</h4>
+						<p class="list-group-item-text">Details like Content, Semester, ....</p>
+					</a>
+				</div>
+			</div>
+		</div>
+	</div>
+	<script>
+		if(Cookies.get('state' == 'logged-in')) {
+		    login();
+		} else {
+		    logout();
+		}
+	</script>
 </body>
 </html>
