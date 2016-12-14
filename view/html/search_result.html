@@ -6,6 +6,8 @@
 	<meta charset="utf-8">
 	<link href="../css/main.css" rel="stylesheet">
 
+	<script
+			src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
 	<!-- Gettting Bootstrap CSS -->
 	<link rel="stylesheet"
 		href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
@@ -13,8 +15,6 @@
 	<script
 		src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 	<!-- Getting Bootstrap JQuery -->
-	<script
-		src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
 	<script src="../js/js.cookie.js"></script>
 	<script src="../js/state.js"></script>
 </head>
@@ -49,6 +49,20 @@
 		</div>
 		<div class="row">
 			<h3>Suchergebnisse:</h3>
+			<script>
+				ss_updatePage = function(page) {
+				var children = $("#paginationList").children();
+				children.removeClass("active");
+				children[page-1].className += " active";
+            }
+			</script>
+			<ul id="paginationList" class="pagination pagination-lg">
+				<li class="active"><a href="#" onclick="ss_updatePage(1)">1</a></li>
+				<li><a href="#" onclick="ss_updatePage(2)">2</a></li>
+				<li><a href="#" onclick="ss_updatePage(3)">3</a></li>
+				<li><a href="#" onclick="ss_updatePage(4)">4</a></li>
+				<li><a href="#" onclick="ss_updatePage(5)">5</a></li>
+			</ul>
 			<div class="col-sm-12 col-md-10">
 				<div class="list-group">
 					<a href="./script_detail.html" class="list-group-item row">
