@@ -1,21 +1,18 @@
 <!DOCTYPE HTML>
 <html lang="de">
 <head>
-<title>IIX WS 2016/17 Prototyp</title>
+	<title>IIX WS 2016/17 Prototyp</title>
 
-<meta charset="utf-8">
-<link href="../css/landing.css" rel="stylesheet">
-<link href="../css/main.css" rel="stylesheet">
+	<meta charset="utf-8">
+	<link href="../css/label-left.css" rel="stylesheet">
+	<link href="../css/main.css" rel="stylesheet">
 
-<!-- Gettting Bootstrap CSS -->
-<link rel="stylesheet"
-	href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
-<!-- Getting Bootstrap JS -->
-<script
-	src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
-<!-- Getting Bootstrap JQuery -->
-<script
-	src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+	<!-- Gettting Bootstrap CSS -->
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+	<!-- Getting Bootstrap JS -->
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+	<!-- Getting Bootstrap JQuery -->
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
 </head>
 <body>
 
@@ -26,29 +23,113 @@
 				<a class="navbar-brand" href="../html/landing_logged_in.html">ShareScript</a>
 				<!-- tite has to be discussed! -->
 			</div>
-			<!--     <ul class="nav navbar-nav"> -->
-			<!--       <li class="active"><a href="#">Home</a></li> -->
-			<!--       <li class="dropdown"><a class="dropdown-toggle" data-toggle="dropdown" href="#">Page 1 <span class="caret"></span></a> -->
-			<!--         <ul class="dropdown-menu"> -->
-			<!--           <li><a href="#">Page 1-1</a></li> -->
-			<!--           <li><a href="#">Page 1-2</a></li> -->
-			<!--           <li><a href="#">Page 1-3</a></li> -->
-			<!--         </ul> -->
-			<!--       </li> -->
-			<!--       <li><a href="#">Page 2</a></li> -->
-			<!--     </ul> -->
+			
 			<ul class="nav navbar-nav navbar-right">
-				<!--       <li><a href="#"><span class="glyphicon glyphicon-user"></span> Sign Up</a></li> -->
-				<li><a href="../html/profile.html"><span
-						class="glyphicon glyphicon-user"></span>Profile</a></li>
+				<li>
+					<a href="../html/profile.html"><span class="glyphicon glyphicon-user"></span>Profile</a>
+				</li>
 			</ul>
 		</div>
 	</nav>
-	<div class="margin_top">
-		<div class="col-sm-2"></div>
-		<div class="col-sm-6">Form zum Upload kommt hierher!
+	<div class="center">
+		<div class="margin_top">
+			<div class="container-fluid" style="background-color: #f0f0f0">
+				<div>
+					<h2>Neuer Eintrag</h2>
+				</div>
+				<div class="col-md-6">
+					<form class="form-horizontal">
+					<div class="form-group">
+						<label class="control-label col-md-3">Titel: </label>
+						<div class="col-md-8">
+							<input id="title" type="text" class="form-control" placeholder="">
+						</div>
+					</div>	
+				</form>
+
+				<form class="form-horizontal">
+					<div class="form-group">
+						<label class="control-label col-md-3">Typ: </label>
+						<div class="col-md-8">
+							<select name="type">
+  								<option value="script">Skriptum</option>
+  								<option value="book">Buch</option>
+  								<option value="written">Mitschrift</option>
+							</select>
+						</div>
+					</div>	
+				</form>
+
+				<form class="form-horizontal">
+					<div class="form-group">
+						<label class="control-label col-md-3">Kurs: </label>
+						<div class="col-md-8">
+							<input id="course" type="text" class="form-control" placeholder="">
+						</div>
+					</div>	
+				</form>
+
+				<form class="form-horizontal">
+					<div class="form-group">
+						<label class="control-label col-md-3">Semester: </label>
+						<div class="col-md-8">
+							<input id="semester" type="text" class="form-control" placeholder="">
+						</div>
+					</div>	
+				</form>
+			
+				<form class="form-horizontal">
+					<div class="form-group">
+						<label class="control-label col-md-3">Foto: </label>
+						<div class="col-md-8">
+							<input id="image" type="file" class="file">
+						</div>
+					</div>	
+				</form>
+
+				<form class="form-horizontal">
+					<div class="form-group">
+						<label class="control-label col-md-3">Beschreibung: </label>
+						<div class="col-md-8">
+							<textarea type="text" class="form-control" rows="3" placeholder=""></textarea>
+						</div>
+					</div>	
+				</form>
+			
+				<form class="form-horizontal">
+					<div class="form-group">
+						<div class="col-md-11">
+							<button id="uploadDataButton" type="button" class="btn btn-primary btn-md" style="float: right" data-toggle="modal" data-target="#myModal">Speichern</button>
+							<!-- Modal -->
+						  	<div class="modal fade" id="myModal" role="dialog">
+								<div class="modal-dialog">
+							
+							  	<!-- Modal content-->
+									<div class="modal-content">
+										<div class="modal-header">
+											<button type="button" class="close" data-dismiss="modal">&times;</button>
+											<h4 class="modal-title">Erfolg!</h4>
+										</div>
+										<div class="modal-body">
+								 			<p>Daten wurden erfolgreich gespeichert.</p>
+										</div>
+										<div class="modal-footer">
+											<button type="button" class="btn btn-default" data-dismiss="modal">OK</button>
+										</div>
+									</div>
+							  
+								</div>
+							</div>
+						</div>
+					</div>
+				</form>
+				</div>
+
+				<div class="col-md-6 center">
+					<img width="200px" border="1px solid #CCC">
+				</div>
+				
+			</div>
 		</div>
-		<div class="col-sm-4"></div>
-	</div>
 </body>
 </html>
