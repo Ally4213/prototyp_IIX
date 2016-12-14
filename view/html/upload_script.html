@@ -7,12 +7,15 @@
 	<link href="../css/label-left.css" rel="stylesheet">
 	<link href="../css/main.css" rel="stylesheet">
 
+	<!-- Getting Bootstrap JQuery -->
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
 	<!-- Gettting Bootstrap CSS -->
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
 	<!-- Getting Bootstrap JS -->
 	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
-	<!-- Getting Bootstrap JQuery -->
-	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+	
+
+	<script src="../js/create.js"></script>
 </head>
 <body>
 
@@ -51,11 +54,20 @@
 					<div class="form-group">
 						<label class="control-label col-md-3">Typ: </label>
 						<div class="col-md-8">
-							<select name="type">
+							<select id="select-type" class="form-control">
   								<option value="script">Skriptum</option>
   								<option value="book">Buch</option>
   								<option value="written">Mitschrift</option>
 							</select>
+						</div>
+					</div>	
+				</form>
+
+				<form class="form-horizontal" id="author-section">
+					<div class="form-group">
+						<label class="control-label col-md-3">Autor: </label>
+						<div class="col-md-8">
+							<input id="author" type="text" class="form-control" placeholder="">
 						</div>
 					</div>	
 				</form>
