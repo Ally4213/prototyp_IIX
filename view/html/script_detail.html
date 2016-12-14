@@ -7,15 +7,17 @@
 	<link href="../css/main.css" rel="stylesheet">
 	<link href="../css/label-left.css" rel="stylesheet">
 
-	<!-- Getting Bootstrap JQuery -->
-	<script
-			src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
-	<!-- Gettting Bootstrap CSS -->
-	<link rel="stylesheet"
-		href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
-	<!-- Getting Bootstrap JS -->
-	<script
-		src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+<!-- Gettting Bootstrap CSS -->
+<link rel="stylesheet"
+	href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+<!-- Getting Bootstrap JQuery -->
+<script
+	src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+<!-- Getting Bootstrap JS -->
+<script
+	src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
 	<script src="../js/js.cookie.js"></script>
 	<script src="../js/state.js"></script>
 </head>
@@ -97,9 +99,63 @@
 				<form class="form-horizontal">
 					<div class="form-group">
 						<div class="col-md-11">
-							<button class="btn-success btn-lg" style="float: right">Besitzer kontaktieren</button>
+							<button id="contactButton" type="button" class="btn btn-success btn-lg" style="float: right" data-toggle="modal" data-target="#myModal">Anbieter kontaktieren</button>
+							<!-- Modal -->
+						  <div class="modal fade" id="myModal" role="dialog">
+							<div class="modal-dialog">
+							
+							  <!-- Modal content-->
+							  <div class="modal-content">
+								<div class="modal-header">
+								  <button type="button" class="close" data-dismiss="modal">&times;</button>
+								  <h4 class="modal-title">Anbieter kontaktieren</h4>
+								</div>
+								<div class="modal-body">
+									<form class="form-horizontal">
+										<div class="form-group">
+											<label class="control-label col-md-3">Name: </label>
+											<div class="col-md-9">
+												<input id="name" type="text" class="form-control" placeholder="">
+											</div>
+										</div>	
+									</form>
+									<form class="form-horizontal">
+										<div class="form-group">
+											<label class="control-label col-md-3">Email: </label>
+											<div class="col-md-9">
+												<input id="mail" type="text" class="form-control" placeholder="">
+											</div>
+										</div>	
+									</form>
+									<form class="form-horizontal">
+										<div class="form-group">
+											<label class="control-label col-md-3">Telefonnummer: </label>
+											<div class="col-md-9">
+												<input id="number" type="text" class="form-control" placeholder="">
+											</div>
+										</div>	
+									</form>
+									<form class="form-horizontal">
+										<div class="form-group">
+											<label class="control-label col-md-3">Nachricht: </label>
+											<div class="col-md-9">
+												<textarea id="message" type="text" class="form-control" rows="5"></textarea>
+											</div>
+										</div>	
+									</form>
+								</div>
+								<div class="modal-footer">
+								<button type="button" class="btn btn-default" data-dismiss="modal">Abbrechen</button>
+								  <button type="button" class="btn btn-primary" data-dismiss="modal">Senden</button>
+								</div>
+							  </div>
+							  
+							</div>
+						  </div>
+						<!-- modal end -->
 						</div>
 					</div>
+					
 				</form>
 				</div>
 
