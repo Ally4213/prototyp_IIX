@@ -1,20 +1,22 @@
 <!DOCTYPE HTML>
 <html lang="de">
 <head>
-<title>IIX WS 2016/17 Prototyp</title>
+	<title>Sharescript - Search results</title>
 
-<meta charset="utf-8">
-<link href="../css/main.css" rel="stylesheet">
+	<meta charset="utf-8">
+	<link href="../css/main.css" rel="stylesheet">
 
-<!-- Gettting Bootstrap CSS -->
-<link rel="stylesheet"
-	href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
-<!-- Getting Bootstrap JS -->
-<script
-	src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
-<!-- Getting Bootstrap JQuery -->
-<script
-	src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+	<!-- Gettting Bootstrap CSS -->
+	<link rel="stylesheet"
+		href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+	<!-- Getting Bootstrap JS -->
+	<script
+		src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+	<!-- Getting Bootstrap JQuery -->
+	<script
+		src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+	<script src="../js/js.cookie.js"></script>
+	<script src="../js/state.js"></script>
 </head>
 <body>
 	<!-- NAVBAR -->
@@ -47,20 +49,74 @@
 		</div>
 		<div class="row">
 			<h3>Suchergebnisse:</h3>
-			<div class="col-sm-
 			<div class="col-sm-12 col-md-10">
 				<div class="list-group">
-					<a href="./script_detail.html" class="list-group-item">
-						<h4 class="list-group-item-heading">Script Number One</h4>
-						<p class="list-group-item-text">Details like Content, Semester, ....</p>
+					<a href="./script_detail.html" class="list-group-item row">
+						<div class="col-sm-2">
+							<img src="../../resources/notebook-icon.png" class="img-responsive"/>
+						</div>
+						<div class="col-sm-10">
+							<h4 class="list-group-item-heading">Algebra Mitschrift (Korl)</h4>
+							<p class="list-group-item-text"><label>Semester:</label> WS2016</p>
+							<p class="list-group-item-text"><label>Kurs:</label> Algebra & Diskrete Mathematik</p>
+							<p class="list-group-item-text"><label>Beschreibung:</label> Mitschrift aus WS16 mit besseren Erklärungen als in der Orangen Bibel</p>
+						</div>
 					</a>
-					<a href="./script_detail.html" class="list-group-item">
-						<h4 class="list-group-item-heading">Script Number One</h4>
-						<p class="list-group-item-text">Details like Content, Semester, ....</p>
+					<a href="./script_detail.html" class="list-group-item row">
+						<div class="col-sm-2">
+							<img src="../../resources/script_src.jpg" class="img-responsive"/>
+						</div>
+						<div class="col-sm-10">
+							<h4 class="list-group-item-heading">HTML &amp; CSS for Dummies</h4>
+							<p class="list-group-item-text"><label>Semester:</label> WS2016</p>
+							<p class="list-group-item-text"><label>Kurs:</label> Interface & Interaction Design</p>
+							<p class="list-group-item-text"><label>Beschreibung:</label> Mit diesem Buch lernen Sie als Webdesigner die Vorteile von HTML5 und CSS3 kennen und gezielt einzusetzen,
+								um einzigartige Webseiten zu gestalten, die sowohl funktional sind als auch optisch etwas zu bieten haben.</p>
+						</div>
+					</a>
+					<a href="./script_detail.html" class="list-group-item row">
+						<div class="col-sm-2">
+							<img src="../../resources/mathe-buch.gif" class="img-responsive"/>
+						</div>
+						<div class="col-sm-10">
+							<h4 class="list-group-item-heading">Algebra &amp diskrete Mathematik</h4>
+							<p class="list-group-item-text"><label>Semester:</label> </p>
+							<p class="list-group-item-text"><label>Kurs:</label> Algebra &amp diskrete Mathematik</p>
+							<p class="list-group-item-text"><label>Beschreibung:</label> Die Orange Bibel</p>
+						</div>
+					</a>
+					<a href="./script_detail.html" class="list-group-item row">
+						<div class="col-sm-2">
+							<img src="../../resources/notebook-icon.png" class="img-responsive"/>
+						</div>
+						<div class="col-sm-10">
+							<h4 class="list-group-item-heading">TIL Mitschrift (Thomas89)</h4>
+							<p class="list-group-item-text"><label>Semester:</label> SS2016</p>
+							<p class="list-group-item-text"><label>Kurs:</label> TIL</p>
+							<p class="list-group-item-text"><label>Beschreibung:</label> Meine Mitschrift aus TIL, vollständig bis auf den Teil über Automaten.</p>
+						</div>
+					</a>
+					<a href="./script_detail.html" class="list-group-item row">
+						<div class="col-sm-2">
+							<img src="../../resources/notebook-icon.png" class="img-responsive"/>
+						</div>
+						<div class="col-sm-10">
+							<h4 class="list-group-item-heading">Algodat Skriptum</h4>
+							<p class="list-group-item-text"><label>Semester:</label> WS2015</p>
+							<p class="list-group-item-text"><label>Kurs:</label> Algorithmen & Datenstrukturen</p>
+							<p class="list-group-item-text"><label>Beschreibung:</label> Skriptum für Algodat 1 & 2</p>
+						</div>
 					</a>
 				</div>
 			</div>
 		</div>
 	</div>
+	<script>
+        if(Cookies.get('state' == 'logged-in')) {
+            login();
+        } else {
+            logout();
+        }
+	</script>
 </body>
 </html>
