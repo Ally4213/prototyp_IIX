@@ -10,12 +10,13 @@
 <!-- Gettting Bootstrap CSS -->
 <link rel="stylesheet"
 	href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
-<!-- Getting Bootstrap JS -->
-<script
-	src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 <!-- Getting Bootstrap JQuery -->
 <script
 	src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+<!-- Getting Bootstrap JS -->
+<script
+	src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
 </head>
 <body>
 	<!-- NAVBAR -->
@@ -102,9 +103,30 @@
 				<form class="form-horizontal">
 					<div class="form-group">
 						<div class="col-md-11">
-							<button class="btn-success btn-lg" style="float: right">Besitzer kontaktieren</button>
+							<button id="button-contact" data-toggle="modal" data-target="#myModal" class="btn-success btn-lg" style="float: right">Besitzer kontaktieren</button>
 						</div>
 					</div>
+					<!-- Modal -->
+						  <div class="modal fade" id="myModal" role="dialog">
+							<div class="modal-dialog">
+							
+							  <!-- Modal content-->
+							  <div class="modal-content">
+								<div class="modal-header">
+								  <button type="button" class="close" data-dismiss="modal">&times;</button>
+								  <h4 class="modal-title">Erfolg!</h4>
+								</div>
+								<div class="modal-body">
+								  <p>Daten wurden erfolgreich gespeichert.</p>
+								</div>
+								<div class="modal-footer">
+								  <button type="button" class="btn btn-default" data-dismiss="modal">OK</button>
+								</div>
+							  </div>
+							  
+							</div>
+						  </div>
+						<!-- modal end -->
 				</form>
 				</div>
 
