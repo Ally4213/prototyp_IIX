@@ -16,21 +16,25 @@
 	
 
 	<script src="../js/create.js"></script>
+	<script src="../js/js.cookie.js"></script>
+	<script src="../js/state.js"></script>
 </head>
 <body>
-
 	<!-- NAVBAR -->
 	<nav class="navbar navbar-inverse navbar-static-top">
-		<div class="container-fluid" >
+		<div class="container-fluid">
 			<div class="navbar-header">
 				<a class="navbar-brand" href="../html/landing.html">ShareScript</a>
 				<!-- tite has to be discussed! -->
 			</div>
-			
 			<ul class="nav navbar-nav navbar-right">
-				<li>
-					<a href="../html/profile.html"><span class="glyphicon glyphicon-user"></span>Profile</a>
-				</li>
+				<!--       <li><a href="#"><span class="glyphicon glyphicon-user"></span> Sign Up</a></li> -->
+				<li class="logged-in"><a href="../html/profile.html"><span
+						class="glyphicon glyphicon-user"></span>Profile</a></li>
+				<li class="logged-in"><a onclick="logout();" href="#"><span
+						class="glyphicon glyphicon-off"></span>Logout</a></li>
+
+				<li class="logged-out"><a onclick="login();" href="#"><span class="glyphicon glyphicon-log-in"></span> Login über ZID</a></li>
 			</ul>
 		</div>
 	</nav>
@@ -116,7 +120,7 @@
 						<div class="col-md-11">
 
 							<button id="uploadDataButton" type="button" class="btn btn-primary btn-md" style="float: right" data-toggle="modal" data-target="#myModal">Speichern</button>
-							<button id="backButton" type="button" class="btn btn-secondary btn-md" style="float: right;margin-right: 10px;">Abbrechen</button>
+							<button id="backButton" type="button" class="btn btn-default btn-md" style="float: right;margin-right: 10px;">Abbrechen</button>
 							<!-- Modal -->
 						  	<div class="modal fade" id="myModal" role="dialog">
 								<div class="modal-dialog">
@@ -152,5 +156,12 @@
 				
 			</div>
 		</div>
+	<script>
+		if(Cookies.get('state' == 'logged-in')) {
+			login();
+		} else {
+			logout();
+		}
+	</script>
 </body>
 </html>
