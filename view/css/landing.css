@@ -11,18 +11,27 @@
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;	
+    margin-right: -15px;
+    margin-left: -15px;
 }
 
 h1{
 	font-size: 40px !important;
 	color: white !important;
 	padding-top: 25%;
-	padding-left: 45%
+	text-align: center;
 }
 h2{
 	margin:auto;
-	padding-left: 39%;
+	text-align: center;
 	color:white !important;
+}
+
+.container-full {
+    margin-right: auto;
+    margin-left: auto;
+    padding-left: 15px;
+    padding-right: 15px;
 }
 
 #custom-search-input{
@@ -76,13 +85,13 @@ h2{
 }
 
 .downward_arrow{
-position: absolute !important;
+    margin-top: 50px;
 	size: 20px;
 	height: 30px;
 	font-size: 50px;
 	color: white;
-	top: 94%;
-	left: 50%;
+
+	text-align: center;
 }
 
 .add_resource{
