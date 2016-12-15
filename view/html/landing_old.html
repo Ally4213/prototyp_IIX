@@ -4,7 +4,7 @@
 	<title>IIX WS 2016/17 Prototyp</title>
 
 	<meta charset="utf-8">
-	<link href="../css/landing.css" rel="stylesheet">
+	<link href="../css/landing_old.css" rel="stylesheet">
 	<link href="../css/main.css" rel="stylesheet">
 
 	<!-- Gettting Bootstrap CSS -->
@@ -40,17 +40,15 @@
 			</ul>
 		</div>
 	</nav>
-	<div class="container-full">
-		<div class="row"">
-		<div class="col-md-12">
-		<div class="parallex_head">
-		<!-- HEADLINE WITH SUBHEAD -->
-		
-			
-				<h1>ShareScript</h1>
-				<h2>Share and find your scripts, books...</h2>
 
-			<form action="./search_result.html">
+	<div class="parallex_head">
+		<!-- HEADLINE WITH SUBHEAD -->
+
+		<h1>ShareScript</h1>
+		<h2>Share and find books & notes!</h2>
+		<!-- tite has to be discussed! -->
+
+		<form action="./search_result.html">
 			<div id="custom-search-input">
 				<div class="input-group col-md-12">
 					<input type="text" class="form-control input-lg" placeholder="Search..."/>
@@ -62,26 +60,12 @@
 				</div>
 			</div>
 		</form>
-	
-		
-		
-			<div class="col-center text-center">
-				<a href="extended_search.html">
-					<span class="advanced_search">Erweiterte Suche</span>
-				</a>
-			</div>
-
-
-		
-			<div class="col-center">
-				<div class="downward_arrow">
-					<span class="downward_arrow glyphicon glyphicon-chevron-down"></span>
-				</div>
-			</div>
-		
-		
-	</div>
-	</div>
+		<div class="col-center text-center"><a href="extended_search.html">
+			<span class="advanced_search">Erweiterte Suche</span>
+		</a></div>
+		<div class="downward_arrow">
+			<span class="downward_arrow glyphicon glyphicon-chevron-down"></span>
+		</div>
 	</div>
 	<div class="row logged-in">
 		<div class="col-sm-1"></div>
@@ -101,12 +85,12 @@
 					</a>
 					<a href="./script_detail.html" class="list-group-item row">
 						<div class="col-sm-2">
-							<img src="../../resources/script_src.jpg" class="img-responsive"/>
+							<img src="../../resources/notebook-icon.png" class="img-responsive"/>
 						</div>
 						<div class="col-sm-10">
-							<h4 class="list-group-item-heading">Not HTML for Dummies</h4>
-							<p class="list-group-item-text">WS2016</p>
-							<p class="list-group-item-text">Interface & Interaction</p>
+							<h4 class="list-group-item-heading">WBS Zusammenfassung (Peter)</h4>
+							<p class="list-group-item-text">WS2014</p>
+							<p class="list-group-item-text">WBS</p>
 						</div>
 					</a>
 				</div>
@@ -114,7 +98,7 @@
 		</div>
 		<div class="col-sm-5 row logged-in">
 			<h3> <span>
-				<a href=""> Meine Uploads </a>
+				<a href=""> Meine Angebote </a>
 				<a href="../html/upload_script.html">
 					<span class="glyphicon glyphicon-upload"></span>
 				</a>
@@ -124,12 +108,12 @@
 				<div class="list-group">
 					<a href="./script_detail.html" class="list-group-item row">
 						<div class="col-sm-2">
-							<img src="../../resources/script_src.jpg" class="img-responsive"/>
+							<img src="../../resources/notebook-icon.png" class="img-responsive"/>
 						</div>
 						<div class="col-sm-10">
-							<h4 class="list-group-item-heading">Uploaded HTML for Dummies</h4>
+							<h4 class="list-group-item-heading">Algebra Mitschrift (Korl)</h4>
 							<p class="list-group-item-text">WS2016</p>
-							<p class="list-group-item-text">Interface & Interaction</p>
+							<p class="list-group-item-text">Algebra & Diskrete Mathematik</p>
 						</div>
 					</a>
 					<a href="./script_detail.html" class="list-group-item row">
@@ -149,7 +133,7 @@
 	<div class="row">
 		<div class="col-sm-1"></div>
 		<div class="col-sm-5 row">
-			<h3>Neue Uploads:</h3>
+			<h3>Neue Angebote:</h3>
 			<div class="col-sm-10">
 				<div class="list-group">
 					<a href="./script_detail.html" class="list-group-item row">
@@ -203,11 +187,6 @@
 			</div>
 		</div>
 	</div>
-		
-
-	</div>
-
-	
 	<script>
 		if(Cookies.get('state' == 'logged-in')) {
 		    login();
