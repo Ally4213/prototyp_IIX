@@ -1,0 +1,132 @@
+<!DOCTYPE HTML>
+<html lang="de">
+<head>
+	<title>Sharescript - Search results</title>
+
+	<meta charset="utf-8">
+	<link href="../css/main.css" rel="stylesheet">
+	<link href="../css/uploads.css.css" rel="stylesheet">
+
+	<script
+			src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+	<!-- Gettting Bootstrap CSS -->
+	<link rel="stylesheet"
+		href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+	<!-- Getting Bootstrap JS -->
+	<script
+		src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+	<!-- Getting Bootstrap JQuery -->
+	<script src="../js/js.cookie.js"></script>
+	<script src="../js/state.js"></script>
+
+</head>
+<body>
+	<!-- NAVBAR -->
+	<nav class="navbar navbar-inverse navbar-static-top">
+		<div class="container-fluid">
+			<div class="navbar-header">
+				<a class="navbar-brand" href="../html/landing.html">ShareScript</a>
+				<!-- tite has to be discussed! -->
+			</div>
+			<ul class="nav navbar-nav navbar-right">
+				<!--       <li><a href="#"><span class="glyphicon glyphicon-user"></span> Sign Up</a></li> -->
+				<li class="logged-in"><a href="../html/profile.html"><span
+						class="glyphicon glyphicon-user"></span>Profile</a></li>
+				<li class="logged-in"><a onclick="logout();" href="#"><span
+						class="glyphicon glyphicon-off"></span>Logout</a></li>
+				<li class="logged-out"><a onclick="login();" href="#"><span class="glyphicon glyphicon-log-in"></span> Login über ZID</a></li>
+			</ul>
+		</div>
+	</nav>
+	<div class="margin_top container">
+		<div class="row">
+			<h2>Meine Angebote:</h2>
+			<script>
+				ss_updatePage = function(page) {
+				var children = $("#paginationList").children();
+				children.removeClass("active");
+				children[page-1].className += " active";
+            }
+			</script>
+			<ul id="paginationList" class="pagination pagination-lg">
+				<li class="active"><a href="#" onclick="ss_updatePage(1)">1</a></li>
+				<li><a href="#" onclick="ss_updatePage(2)">2</a></li>
+				<li><a href="#" onclick="ss_updatePage(3)">3</a></li>
+				<li><a href="#" onclick="ss_updatePage(4)">4</a></li>
+				<li><a href="#" onclick="ss_updatePage(5)">5</a></li>
+			</ul>
+			<div class="col-sm-12 col-md-10">
+				<div class="list-group">
+					<a href="./script_detail.html" class="list-group-item row">
+						<div class="col-sm-2">
+							<img src="../../resources/notebook-icon.png" class="img-responsive"/>
+						</div>
+						<div class="col-sm-8">
+							<h4 class="list-group-item-heading">Algebra Mitschrift (Korl)</h4>
+							<p class="list-group-item-text"><label>Semester:</label> WS2016</p>
+							<p class="list-group-item-text"><label>Kurs:</label> Algebra & Diskrete Mathematik</p>
+							<p class="list-group-item-text"><label>Beschreibung:</label> Mitschrift aus WS16 mit besseren Erklärungen als in der Orangen Bibel</p>
+						</div>
+						<div class="col-sm-1 taken" style="background-color: red;">
+							<p>Verfügbar</p>
+							<button type="button" class="btn btn-primary">V</button>
+						</div>
+					</a>
+					<a href="./script_detail.html" class="list-group-item row">
+						<div class="col-sm-2">
+							<img src="../../resources/script_src.jpg" class="img-responsive"/>
+						</div>
+						<div class="col-sm-10">
+							<h4 class="list-group-item-heading">HTML &amp; CSS for Dummies</h4>
+							<p class="list-group-item-text"><label>Semester:</label> WS2016</p>
+							<p class="list-group-item-text"><label>Kurs:</label> Interface & Interaction Design</p>
+							<p class="list-group-item-text"><label>Beschreibung:</label> Mit diesem Buch lernen Sie als Webdesigner die Vorteile von HTML5 und CSS3 kennen und gezielt einzusetzen,
+								um einzigartige Webseiten zu gestalten, die sowohl funktional sind als auch optisch etwas zu bieten haben.</p>
+						</div>
+					</a>
+					<a href="./script_detail.html" class="list-group-item row">
+						<div class="col-sm-2">
+							<img src="../../resources/mathe-buch.gif" class="img-responsive"/>
+						</div>
+						<div class="col-sm-10">
+							<h4 class="list-group-item-heading">Algebra &amp diskrete Mathematik</h4>
+							<p class="list-group-item-text"><label>Semester:</label> </p>
+							<p class="list-group-item-text"><label>Kurs:</label> Algebra &amp diskrete Mathematik</p>
+							<p class="list-group-item-text"><label>Beschreibung:</label> Die Orange Bibel</p>
+						</div>
+					</a>
+					<a href="./script_detail.html" class="list-group-item row">
+						<div class="col-sm-2">
+							<img src="../../resources/notebook-icon.png" class="img-responsive"/>
+						</div>
+						<div class="col-sm-10">
+							<h4 class="list-group-item-heading">TGI Mitschrift (Korl)</h4>
+							<p class="list-group-item-text"><label>Semester:</label> SS2013</p>
+							<p class="list-group-item-text"><label>Kurs:</label> Technische Grundlagen der Informatik</p>
+							<p class="list-group-item-text"><label>Beschreibung:</label> Floatingpoint Kapitel fehlt, ansosten vollständig.</p>
+						</div>
+					</a>
+					<a href="./script_detail.html" class="list-group-item row">
+						<div class="col-sm-2">
+							<img src="../../resources/notebook-icon.png" class="img-responsive"/>
+						</div>
+						<div class="col-sm-10">
+							<h4 class="list-group-item-heading">Algodat Skriptum</h4>
+							<p class="list-group-item-text"><label>Semester:</label> WS2015</p>
+							<p class="list-group-item-text"><label>Kurs:</label> Algorithmen & Datenstrukturen</p>
+							<p class="list-group-item-text"><label>Beschreibung:</label> Skriptum für Algodat 1 & 2</p>
+						</div>
+					</a>
+				</div>
+			</div>
+		</div>
+	</div>
+	<script>
+        if(Cookies.get('state' == 'logged-in')) {
+            login();
+        } else {
+            logout();
+        }
+	</script>
+</body>
+</html>
