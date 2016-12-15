@@ -90,59 +90,10 @@
                         <form class="form-horizontal">
                             <div class="form-group">
                                 <div class="col-md-11">
-                                    <button id="contactButton" type="button" class="btn btn-success btn-lg" style="float: right" data-toggle="modal" data-target="#myModal">Anbieter kontaktieren</button>
-                                    <!-- Modal -->
-                                    <div class="modal fade" id="myModal" role="dialog">
-                                        <div class="modal-dialog">
-                                            <!-- Modal content-->
-                                            <div class="modal-content">
-                                                <div class="modal-header">
-                                                    <button type="button" class="close" data-dismiss="modal">&times;</button>
-                                                    <h4 class="modal-title">Anbieter kontaktieren</h4>
-                                                </div>
-                                                <div class="modal-body">
-                        							<form class="form-horizontal">
-                        								<div class="form-group">
-                        									<label class="control-label col-md-3">Name: </label>
-                        									<div class="col-md-9">
-                        										<input id="name" type="text" class="form-control" placeholder="">
-                        									</div>
-                    	    							</div>	
-                       								</form>
-                        							<form class="form-horizontal">
-                     								   	<div class="form-group">
-                     								   		<label class="control-label col-md-3">Email: </label>
-                        									<div class="col-md-9">
-                       								 			<input id="mail" type="text" class="form-control" placeholder="">
-                							        		</div>
-                        								</div>	
-                        							</form>
-                        							<form class="form-horizontal">
-                        								<div class="form-group">
-                        									<label class="control-label col-md-3">Telefonnummer: </label>
-                        									<div class="col-md-9">
-                        										<input id="number" type="text" class="form-control" placeholder="">
-                        									</div>
-                        								</div>	
-                        							</form>
-                        							<form class="form-horizontal">
-                        								<div class="form-group">
-                	        								<label class="control-label col-md-3">Nachricht: </label>
-                	        								<div class="col-md-9">
-                		    	    							<textarea id="message" type="text" class="form-control" rows="5"></textarea>
-                        									</div>
-                        								</div>	
-                        							</form>
-                        						</div>
-                        						<div class="modal-footer">
-                        							<button type="button" class="btn btn-default" data-dismiss="modal">Abbrechen</button>
-                        							<button type="button" class="btn btn-primary" data-dismiss="modal">Senden</button>
-                        						</div>
-                        					</div>
-                        				</div>
-                        			</div>
-                        		</div>
-                        	</div>
+                                    <button id="editButton" type="button" class="btn btn-primary btn-md" style="float: right" data-toggle="modal" data-target="#myModal">Bearbeiten</button>
+                                    <button id="deleteButton" type="button" class="btn btn-danger btn-md" style="float: right;margin-right: 10px;" data-toggle="modal" data-target="#myModal">Löschen</button>
+                                </div>
+                            </div>
                         </form>
                     </div>
                     <div class="col-md-5">
@@ -154,12 +105,40 @@
             </div>
         </div>
         <script>
+            $('document').ready(function(){
+            	$('#editButton').click(function(){
+            		window.location.href='./script_edit.html';
+            	});
+            	$('.modalButton').click(function(){
+            		window.location.href='./landing.html';
+            	});
+            }); 
             if(Cookies.get('state' == 'logged-in')) {
-                login();
+             	login();
             } else {
-                logout();
+            	logout();
             }
         </script>
+        <!-- Modal -->
+        <div class="modal fade" id="myModal" role="dialog">
+            <div class="modal-dialog">
+                <!-- Modal content-->
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal">&times;</button>
+                        <h4 class="modal-title">Löschen</h4>
+                    </div>
+                    <div class="modal-body">
+                        <p>Soll das Angebot gelöscht werden?</p>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-default" data-dismiss="modal">Abbrechen</button>
+                        <button type="button" class="btn btn-danger modalButton" data-dismiss="modal">Löschen</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- modal end -->
     </body>
 </html>
 
