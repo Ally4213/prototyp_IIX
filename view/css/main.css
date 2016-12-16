@@ -20,3 +20,17 @@ body {
     margin: 0 auto;
     width: 80%;
 }
+
+
+.trueCenter {
+  height: 10em;
+  display: flex;
+  align-items: center;
+  justify-content: center; }
+.trueCenter p {
+  margin: 0; }
+  
+.vertical-align {
+    display: flex;
+    align-items: center;
+}
