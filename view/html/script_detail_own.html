@@ -112,11 +112,11 @@
             	$('.modalButton').click(function(){
             		window.location.href='./landing.html';
             	});
-            }); 
-            if(Cookies.get('state' == 'logged-in')) {
-             	login();
+            });
+            if(Cookies.get('state') == 'logged-in') {
+                login();
             } else {
-            	logout();
+                logout();
             }
         </script>
         <!-- Modal -->
