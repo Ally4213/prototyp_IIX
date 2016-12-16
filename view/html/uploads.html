@@ -15,7 +15,8 @@
 	<!-- Getting Bootstrap JS -->
 	<script
 		src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
-	<!-- Getting Bootstrap JQuery -->
+	<script
+			src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/tooltip.min.js"></script>
 	<script src="../js/js.cookie.js"></script>
 	<script src="../js/state.js"></script>
 
@@ -41,8 +42,11 @@
 	<div class="margin_top container">
 		<div class="row">
 			<div class="col-sm-4">
-				<p class="h2">Meine Angebote:</p>
-				<button type="button" class="btn btn-primary active">Neues Angebot erstellen</button>
+				<p class="h2"> <a data-toggle="tooltip" title="Erstelle ein neues Angebot!" href="../html/upload_script.html">
+					<span class="glyphicon glyphicon-upload"></span>
+				</a>
+					Meine Angebote:
+				</p>
 				<div>
 				<script>
 					ss_updatePage = function(page) {
@@ -145,6 +149,9 @@
         } else {
             logout();
         }
+        $(document).ready(function(){
+            $('[data-toggle="tooltip"]').tooltip();
+        });
 	</script>
 </body>
 </html>
