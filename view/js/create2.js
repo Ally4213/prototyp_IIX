@@ -7,6 +7,7 @@ $('document').ready(function(){
   		}
 	});
 	$('select').val('book');
+	
 	$('#image-chooser').change(function() {
 		var file = this.files[0];
 		
