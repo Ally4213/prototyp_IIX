@@ -5,7 +5,7 @@
 
 	<meta charset="utf-8">
 	<link href="../css/main.css" rel="stylesheet">
-	<link href="../css/uploads.css.css" rel="stylesheet">
+	<link href="../css/uploads.css" rel="stylesheet">
 
 	<script
 			src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
@@ -57,61 +57,71 @@
 			</ul>
 			<div class="col-sm-12 col-md-10">
 				<div class="list-group">
-					<a href="./script_detail.html" class="list-group-item row">
+					<script>
+						var toggleAvailable = function (note) {
+						    var text = note.innerHTML();
+						    if(text == "Verfügbar")
+							{
+							    note.innerText("Vergeben");
+							}
+							else
+							{
+                                note.innerText("Verfügbar");
+							}
+						}
+					</script>
+					<a href="./script_detail_own.html" class="list-group-item row">
 						<div class="col-sm-2">
 							<img src="../../resources/notebook-icon.png" class="img-responsive"/>
 						</div>
 						<div class="col-sm-8">
-							<h4 class="list-group-item-heading">Algebra Mitschrift (Korl)</h4>
+							<h4 class="list-group-item-heading">Algebra Mitschrift (Korl) <span onclick="toggleAvailable(this);" class="badge button" >Verfügbar</span></h4>
 							<p class="list-group-item-text"><label>Semester:</label> WS2016</p>
 							<p class="list-group-item-text"><label>Kurs:</label> Algebra & Diskrete Mathematik</p>
 							<p class="list-group-item-text"><label>Beschreibung:</label> Mitschrift aus WS16 mit besseren Erklärungen als in der Orangen Bibel</p>
-						</div>
-						<div class="col-sm-1 taken" style="background-color: red;">
-							<p>Verfügbar</p>
-							<button type="button" class="btn btn-primary">V</button>
+
 						</div>
 					</a>
-					<a href="./script_detail.html" class="list-group-item row">
+					<a href="./script_detail_own.html" class="list-group-item row">
 						<div class="col-sm-2">
 							<img src="../../resources/script_src.jpg" class="img-responsive"/>
 						</div>
 						<div class="col-sm-10">
-							<h4 class="list-group-item-heading">HTML &amp; CSS for Dummies</h4>
+							<h4 class="list-group-item-heading">HTML &amp; CSS for Dummies <span class="badge">Vergeben</span></h4>
 							<p class="list-group-item-text"><label>Semester:</label> WS2016</p>
 							<p class="list-group-item-text"><label>Kurs:</label> Interface & Interaction Design</p>
 							<p class="list-group-item-text"><label>Beschreibung:</label> Mit diesem Buch lernen Sie als Webdesigner die Vorteile von HTML5 und CSS3 kennen und gezielt einzusetzen,
 								um einzigartige Webseiten zu gestalten, die sowohl funktional sind als auch optisch etwas zu bieten haben.</p>
 						</div>
 					</a>
-					<a href="./script_detail.html" class="list-group-item row">
+					<a href="./script_detail_own.html" class="list-group-item row">
 						<div class="col-sm-2">
 							<img src="../../resources/mathe-buch.gif" class="img-responsive"/>
 						</div>
 						<div class="col-sm-10">
-							<h4 class="list-group-item-heading">Algebra &amp diskrete Mathematik</h4>
+							<h4 class="list-group-item-heading">Algebra &amp diskrete Mathematik<span class="badge">Vergeben</span></h4>
 							<p class="list-group-item-text"><label>Semester:</label> </p>
 							<p class="list-group-item-text"><label>Kurs:</label> Algebra &amp diskrete Mathematik</p>
 							<p class="list-group-item-text"><label>Beschreibung:</label> Die Orange Bibel</p>
 						</div>
 					</a>
-					<a href="./script_detail.html" class="list-group-item row">
+					<a href="./script_detail_own.html" class="list-group-item row">
 						<div class="col-sm-2">
 							<img src="../../resources/notebook-icon.png" class="img-responsive"/>
 						</div>
 						<div class="col-sm-10">
-							<h4 class="list-group-item-heading">TGI Mitschrift (Korl)</h4>
+							<h4 class="list-group-item-heading">TGI Mitschrift (Korl)<span class="badge">Verfügbar</span></h4>
 							<p class="list-group-item-text"><label>Semester:</label> SS2013</p>
 							<p class="list-group-item-text"><label>Kurs:</label> Technische Grundlagen der Informatik</p>
 							<p class="list-group-item-text"><label>Beschreibung:</label> Floatingpoint Kapitel fehlt, ansosten vollständig.</p>
 						</div>
 					</a>
-					<a href="./script_detail.html" class="list-group-item row">
+					<a href="./script_detail_own.html" class="list-group-item row">
 						<div class="col-sm-2">
 							<img src="../../resources/notebook-icon.png" class="img-responsive"/>
 						</div>
 						<div class="col-sm-10">
-							<h4 class="list-group-item-heading">Algodat Skriptum</h4>
+							<h4 class="list-group-item-heading">Algodat Skriptum<span class="badge">Vergeben</span></h4>
 							<p class="list-group-item-text"><label>Semester:</label> WS2015</p>
 							<p class="list-group-item-text"><label>Kurs:</label> Algorithmen & Datenstrukturen</p>
 							<p class="list-group-item-text"><label>Beschreibung:</label> Skriptum für Algodat 1 & 2</p>
