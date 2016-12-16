@@ -3,7 +3,7 @@
  */
 
 login = function() {
-    Cookies.set('state', 'logged-in');
+    localStorage.setItem("state", "logged-in");
 
     var lo = $(".logged-out");
     lo.children().hide();
@@ -17,7 +17,7 @@ login = function() {
 };
 
 logout = function () {
-    Cookies.remove('state');
+    localStorage.removeItem("state");
 
     var lo = $(".logged-out");
     lo.children().show();

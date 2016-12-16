@@ -140,7 +140,7 @@
 		</div>
 	</div>
 	<script>
-        if(Cookies.get('state') == 'logged-in') {
+        if(localStorage.getItem('state') == 'logged-in') {
             login();
         } else {
             logout();

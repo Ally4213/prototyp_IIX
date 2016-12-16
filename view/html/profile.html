@@ -134,7 +134,7 @@
 	</div>
 	<script src="../js/profile.js"></script>
 	<script>
-        if(Cookies.get('state') == 'logged-in') {
+        if(localStorage.getItem('state') == 'logged-in') {
             login();
         } else {
             logout();
