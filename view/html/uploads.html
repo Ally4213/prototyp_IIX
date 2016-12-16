@@ -40,22 +40,30 @@
 	</nav>
 	<div class="margin_top container">
 		<div class="row">
-			<h2>Meine Angebote:</h2>
-			<script>
-				ss_updatePage = function(page) {
-				var children = $("#paginationList").children();
-				children.removeClass("active");
-				children[page-1].className += " active";
-            }
-			</script>
-			<ul id="paginationList" class="pagination pagination-lg">
-				<li class="active"><a href="#" onclick="ss_updatePage(1)">1</a></li>
-				<li><a href="#" onclick="ss_updatePage(2)">2</a></li>
-				<li><a href="#" onclick="ss_updatePage(3)">3</a></li>
-				<li><a href="#" onclick="ss_updatePage(4)">4</a></li>
-				<li><a href="#" onclick="ss_updatePage(5)">5</a></li>
-			</ul>
-			<div class="col-sm-12 col-md-10">
+			<div class="col-sm-4">
+				<p class="h2">Meine Angebote:</p>
+				<button type="button" class="btn btn-primary active">Neues Angebot erstellen</button>
+				<div>
+				<script>
+					ss_updatePage = function(page) {
+						var children = $("#paginationList").children();
+						children.removeClass("active");
+						children[page-1].className += " active";
+					}
+				</script>
+				<ul id="paginationList" class="pagination pagination-lg">
+					<li class="active"><a href="#" onclick="ss_updatePage(1)">1</a></li>
+					<li><a href="#" onclick="ss_updatePage(2)">2</a></li>
+					<li><a href="#" onclick="ss_updatePage(3)">3</a></li>
+					<li><a href="#" onclick="ss_updatePage(4)">4</a></li>
+					<li><a href="#" onclick="ss_updatePage(5)">5</a></li>
+				</ul>
+				</div>
+			</div>
+
+		</div>
+		<div class="row">
+			<div class="col-sm-12 col-md-12">
 				<div class="list-group">
 					<script>
 						var toggleAvailable = function (note) {
@@ -71,7 +79,7 @@
 						}
 					</script>
 					<a href="./script_detail_own.html" class="list-group-item row">
-						<div class="col-sm-2">
+						<div class="col-sm-2 col-xs-1">
 							<img src="../../resources/notebook-icon.png" class="img-responsive"/>
 						</div>
 						<div class="col-sm-8">
@@ -83,7 +91,7 @@
 						</div>
 					</a>
 					<a href="./script_detail_own.html" class="list-group-item row">
-						<div class="col-sm-2">
+						<div class="col-sm-2 col-xs-1">
 							<img src="../../resources/script_src.jpg" class="img-responsive"/>
 						</div>
 						<div class="col-sm-10">
@@ -95,7 +103,7 @@
 						</div>
 					</a>
 					<a href="./script_detail_own.html" class="list-group-item row">
-						<div class="col-sm-2">
+						<div class="col-sm-2 col-xs-1">
 							<img src="../../resources/mathe-buch.gif" class="img-responsive"/>
 						</div>
 						<div class="col-sm-10">
